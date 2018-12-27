@@ -1,0 +1,175 @@
+body{
+	
+
+}
+
+#backgroundImage {
+
+	width: 100%;
+	height: 100%;
+	z-index:-1; /* on le positionne le plus bas possible */
+	position: absolute; 
+	top: 0px; 
+	left: 0px; 
+
+	background-image: url(images/dock.jpg);
+	background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.tab_inscription {
+
+	height:auto;
+	width:50%;
+	border-style:solid;
+	border-width:1px;
+	margin-top:5%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: white;
+	border-radius: 2px;
+}
+
+.tab_connexion {
+	height:100px;
+	width:300px;
+	border-style:solid;
+	border-width:1px;
+	margin-top:10%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#input_submit {
+	width:90%;
+	margin-left:5%;
+	font-size:20px;
+	color:white;
+	border-width:1px;
+	border-style:solid;
+	background-color:black;
+	border-color:black;
+	
+	
+	
+}
+
+
+#input_submit:hover{
+	cursor:pointer;
+	color:black;
+	background-color:white;
+	transition:0.3s;
+	border:1;
+	border-width:1px;
+}
+	
+input{
+	width:80%;
+	position:relative;
+	font-size:13px;
+	margin-left:8%;
+	padding-top:10px;
+	padding-left:5px;
+	padding-bottom:10px;
+	margin-bottom:20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:grey;
+	
+}
+
+input:focus{
+	border-color:black;	
+}
+
+a {
+	color: red;
+    cursor: pointer;
+}
+
+a :hover{
+	color:red;
+}
+
+[type="radio"] {
+	width: auto;
+}
+
+/* style concernant le tableau de bord */
+#div_principale_tableau_de_bord{
+		margin : 2% 10% 10% 10%;
+		height: auto;
+		width:auto;
+		background-color: white;
+		border-style:solid;
+		border-width:1px;
+		border-radius: 2px;
+}
+
+#map {
+        height: 400px;
+
+      }
+
+
+/* style concernant le menu du tableau de bord */
+#menu
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	background:black;
+	width:100%;
+	right:0;
+	left:0;
+	
+	top:26%;
+	min-height: 11%;
+}
+
+
+#menu a
+{
+	font-family: Helvetica;
+	display: inline-block;
+	color: white;
+	border: 1px solid white;
+	border-radius: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 2.5px;
+	background-color: black;
+	transition: 0.4s ease-in-out;
+	font-size: 110%;
+	top: 1.2em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+a
+{
+	text-decoration: none;
+	color:inherit;
+}
+
+
+a:active
+{
+	color:black;
+	color:inherit;
+}
+
+
+#menu a:hover
+{
+	
+	background-color: white;
+	border-radius: 2.5px;
+	color: black;
+}
