@@ -11,3 +11,5 @@ les fichier json son dans un dossier user avec comme nom <adresse_emai>.json
 a chaque creation de compte on cree un nouveau fichier json
 
 Le dossier Portail_503 c'est le serveur PHP et le dossier projet_info0503 c'est les differents serveurs java
+
+Pour tester le portail il faudera lancer les serveurs avant bien evidement.
