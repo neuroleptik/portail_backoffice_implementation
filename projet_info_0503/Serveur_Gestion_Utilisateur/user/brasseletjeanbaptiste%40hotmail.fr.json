@@ -1,0 +1,8 @@
+{
+	"civilite" : "Monsieur",
+	"nom" : "Brasselet",
+	"prenom" : "Jean-Baptiste",
+	"adresse_email" : "trumpdonalddu10@outlookamerica.usa",
+	"mot_de_passe" : "31f7a65e315586ac198bd798b6629ce4903d0899476d5741a9f32e2e521b6a66",
+	"liste_bateaux": ["12345","12346","12347"]
+}
