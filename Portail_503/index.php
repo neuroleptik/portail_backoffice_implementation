@@ -58,6 +58,7 @@
 			 			$_SESSION['prenom']=$result['prenom'];
 			 			$_SESSION['civilite']=$result['civilite'];
 			 			$_SESSION['liste_bateaux']=$result['liste_bateaux'];
+			 			$_SESSION['type_utilisateur']=$result['type_utilisateur'];
 			 			header("Location: tableau_bord.php");
 						exit();
 			 		}
@@ -281,8 +282,8 @@
 				<script src='main_animation.js'></script>
 			</head>	
 			<body>
+				<center><h1>La Fameuse application de gestionnaire de port</h1></center>
 
-				<div class='bg2' id='backgroundImage'>
 					<?php
 						if(isset($_POST['verif'])){
 							if ($_GET['type']==0) {
@@ -304,17 +305,17 @@
 							afficher_form_inscripton();
 							afficher_form();
 							echo "<script type='text/javascript'>$( 'html' ).ready(function() {
-							$('#backgroundImage').hide();
+							$('body').hide();
 							$('	#tab_connexion').hide();
 							$('#tab_inscription').hide();
-							$('#backgroundImage' ).fadeIn(2000);
+							$('body' ).fadeIn(2000);
 							$( '#tab_connexion').fadeIn(3000);});</script>";
 							
 						}
 
 					?>
 
-				</div>
+			
 			</body>
 		</html>
 

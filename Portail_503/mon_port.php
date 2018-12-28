@@ -1,16 +1,5 @@
 <?php 
-	require 'Bateau/Bateau.php';
 	session_start();
-	
-
-	$bateaux[0] = new Bateau("Mobidick",1.2,"ZODIAC","Downald Trump");
-	$bateaux[1] = new Bateau("L'aventurier",10,"VOILIER","Downald Trump");
-	$bateaux[2] = new Bateau("La Chaloupe",2,"PENICHE","Downald Trump");
-	$bateaux[3] = new Bateau("El Mignot",200,"PAQUEBOT","Downald Trump");
-	$bateaux[4] = new Bateau("El Baala",150,"YATCH","Downald Trump");
-	$bateaux[5] = new Bateau("Le Charles de Gaule",300,"FREGATE","Downald Trump");
-	$_SESSION['bateaux'] = $bateaux;
-
 ?>
 <!doctype HTML>
 		<html>
@@ -22,7 +11,7 @@
 			</head>	
 			<body>	
 					<div id='div_principale_tableau_de_bord'>
-						<center><h1>Mon tableau de bord</h1></center>
+						<center><h1>Mon port</h1></center>
 						<?php
 							if ($_SESSION['type_utilisateur'] == "proprietaire")
 								include 'menu_proprietaire.php';
@@ -35,10 +24,7 @@
 						<?php
 							echo "<p id =nombre_bateaux>Vous avez ".count($_SESSION['liste_bateaux'])." bateau(x).</p>";
 
-							echo "<p>ATTENTION TEST BATEAUX EN DUR DANS LE CODE</p>";
-							for ($i=0; $i < count($bateaux); $i++) { 
-								echo $bateaux[$i];
-							}
+							echo "<p>ATTENTION PAGE A CONSTRUIRE</p>";
 						?>
 						<div id="map"></div>
 					</div>
@@ -49,5 +35,3 @@
 				<script type='text/javascript' src='getJsonUtilisateur.js'></script>
 			</body>
 		</html>
-
-

@@ -1,16 +1,6 @@
 <?php 
 	require 'Bateau/Bateau.php';
 	session_start();
-	
-
-	$bateaux[0] = new Bateau("Mobidick",1.2,"ZODIAC","Downald Trump");
-	$bateaux[1] = new Bateau("L'aventurier",10,"VOILIER","Downald Trump");
-	$bateaux[2] = new Bateau("La Chaloupe",2,"PENICHE","Downald Trump");
-	$bateaux[3] = new Bateau("El Mignot",200,"PAQUEBOT","Downald Trump");
-	$bateaux[4] = new Bateau("El Baala",150,"YATCH","Downald Trump");
-	$bateaux[5] = new Bateau("Le Charles de Gaule",300,"FREGATE","Downald Trump");
-	$_SESSION['bateaux'] = $bateaux;
-
 ?>
 <!doctype HTML>
 		<html>
@@ -22,7 +12,7 @@
 			</head>	
 			<body>	
 					<div id='div_principale_tableau_de_bord'>
-						<center><h1>Mon tableau de bord</h1></center>
+						<center><h1>Louer une place de parking</h1></center>
 						<?php
 							if ($_SESSION['type_utilisateur'] == "proprietaire")
 								include 'menu_proprietaire.php';
@@ -33,13 +23,28 @@
 						?>
 						<center><h2>Mes bateaux</h2></center>
 						<?php
-							echo "<p id =nombre_bateaux>Vous avez ".count($_SESSION['liste_bateaux'])." bateau(x).</p>";
+							echo "<p id = nombre_bateaux>Vous avez ".count($_SESSION['liste_bateaux'])." bateau(x).</p>";
 
-							echo "<p>ATTENTION TEST BATEAUX EN DUR DANS LE CODE</p>";
-							for ($i=0; $i < count($bateaux); $i++) { 
-								echo $bateaux[$i];
-							}
+							echo "<p>ATTENTION PAGE EN CONSTRUCTION</p>";
+							
 						?>
+						<form target="louer_place.php" method="POST">
+							<select id="choix_port"> 
+								<option value="">Choisissez un port</option>
+								<option value="">Marseille</option>
+								<option value="Le Havre">Le Havre</option>
+								<option value="Amsterdam">Amsterdam</option>
+							</select>
+							<select id="choix_bateau">
+								<option value="">Choisissez un de vos bateaux</option>
+							<?php
+								for ($i=0; $i < count($_SESSION['bateaux']); $i++) {
+									echo "<option value='".$_SESSION['bateaux'][$i]->getNom()."'>".$_SESSION['bateaux'][$i]->getNom()."</option>";
+								}
+							?>
+							</select>
+							<input type="submit" name="chercher_place" value="Chercher une place">
+						</form>
 						<div id="map"></div>
 					</div>
 					
